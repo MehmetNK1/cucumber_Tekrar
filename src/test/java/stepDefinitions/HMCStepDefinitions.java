@@ -38,18 +38,14 @@ public class HMCStepDefinitions {
     public void sayfayaGirisYapilamadiginiTestEder() {
         Assert.assertTrue(hmcPage.loginButonu2.isDisplayed());
     }
-
     @And("gecersiz username girer")
     public void gecersizUsernameGirer() {
         hmcPage.usernameKutusu.sendKeys(ConfigReader.getProperty("HMCWrongUsername"));
     }
-
-
     @And("gecersiz username {string} girer")
     public void gecersizUsernameGirer(String username) {
         hmcPage.usernameKutusu.sendKeys(username);
     }
-
     @And("gecersiz password {string} girer")
     public void gecersizPasswordGirer(String password) {
         hmcPage.passwordKutusu.sendKeys(password);
